@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.OutletsDao">
+
+	
+
+	<!-- 插入到数据库 -->
+	<insert id="insertBean"		parameterType="com.entity.Outlets">
+		insert into t_outlets (oname,province,city,address,phone,personincharge,remark,ctime)
+					values (#{oname},#{province},#{city},#{address},#{phone},#{personincharge},#{remark},#{ctime})
+	</insert>
+	
+	<!-- 根据ID删除数据库的记录 -->
+	<delete id="deleteBean"	parameterType="int">
+		delete from t_outlets	where id=#{id}	
+	</delete>
+	
+	<!-- 根据ID更新数据库的记录 -->
+	<update id="updateBean"	parameterType="com.entity.Outlets">
+		update	t_outlets 
+		<set>
+			<trim suffixOverrides=",">
+				<if test="oname !=null">
+					oname=#{oname},
+				</if>
+				<if test="province !=null">
+					province=#{province},
+				</if>
+				<if test="city !=null">
+					city=#{city},
+				</if>
+				<if test="address !=null">
+					address=#{address},
+				</if>
+				<if test="phone !=null">
+					phone=#{phone},
+				</if>
+				<if test="personincharge !=null">
+					personincharge=#{personincharge},
+				</if>
+				<if test="remark !=null">
+					remark=#{remark},
+				</if>
+				<if test="ctime !=null">
+					ctime=#{ctime}
+				</if>
+				
+			</trim>
+		</set>
+		where 
+			id=#{id} 
+ 
+	</update>
+	
+
+	
+	
+	<select id="queryData" parameterType="string" resultType="com.entity.Outlets"   >
+        ${value}
+    </select>
+	
+	
+</mapper>
+
+
+
+
+
+
+

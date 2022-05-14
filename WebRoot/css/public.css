@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px;}
+img{border:0px;}
+body,div,ul,li,ol,dl,dd,dt{ list-style:none;font-size:12px;color:#404040;}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+a{text-decoration:none;}
+.bai{width:100%;}
+#nobd{border:none;}
+.pd{padding-top:13px;}
+#nobg{background:none;}

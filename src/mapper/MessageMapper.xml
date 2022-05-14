@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.MessageDao">
+
+	
+
+	<!-- 插入到数据库 -->
+	<insert id="insertBean"		parameterType="com.entity.Message">
+		insert into t_message (userid,mtitle,mcontent,ctime,rcontent,rtime,status)
+					values (#{userid},#{mtitle},#{mcontent},#{ctime},#{rcontent},#{rtime},#{status})
+	</insert>
+	
+	<!-- 根据ID删除数据库的记录 -->
+	<delete id="deleteBean"	parameterType="int">
+		delete from t_message	where id=#{id}	
+	</delete>
+	
+	<!-- 根据ID更新数据库的记录 -->
+	<update id="updateBean"	parameterType="com.entity.Message">
+		update	t_message 
+		<set>
+			<trim suffixOverrides=",">
+				<if test="userid !=null">
+					userid=#{userid},
+				</if>
+				<if test="mtitle !=null">
+					mtitle=#{mtitle},
+				</if>
+				<if test="mcontent !=null">
+					mcontent=#{mcontent},
+				</if>
+				<if test="ctime !=null">
+					ctime=#{ctime},
+				</if>
+				<if test="rcontent !=null">
+					rcontent=#{rcontent},
+				</if>
+				<if test="rtime !=null">
+					rtime=#{rtime},
+				</if>
+				<if test="status !=null">
+					status=#{status}
+				</if>
+				
+			</trim>
+		</set>
+		where 
+			id=#{id} 
+ 
+	</update>
+	
+
+	
+	
+	<select id="queryData" parameterType="string" resultType="com.entity.Message"   >
+        ${value}
+    </select>
+	
+	
+</mapper>
+
+
+
+
+
+
+

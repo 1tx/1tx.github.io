@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.NoticeDao">
+
+	
+
+	<!-- 插入到数据库 -->
+	<insert id="insertBean"		parameterType="com.entity.Notice">
+		insert into t_Notice (ntitle,ncontent,ctime)
+					values (#{ntitle},#{ncontent},#{ctime})
+	</insert>
+	
+	<!-- 根据ID删除数据库的记录 -->
+	<delete id="deleteBean"	parameterType="int">
+		delete from t_Notice	where id=#{id}	
+	</delete>
+	
+	<!-- 根据ID更新数据库的记录 -->
+	<update id="updateBean"	parameterType="com.entity.Notice">
+		update	t_Notice 
+		<set>
+			<trim suffixOverrides=",">
+				<if test="ntitle !=null">
+					ntitle=#{ntitle},
+				</if>
+				<if test="ncontent !=null">
+					ncontent=#{ncontent},
+				</if>
+				<if test="ctime !=null">
+					ctime=#{ctime}
+				</if>
+				
+			</trim>
+		</set>
+		where 
+			id=#{id} 
+ 
+	</update>
+	
+
+	
+	
+	<select id="queryData" parameterType="string" resultType="com.entity.Notice"   >
+        ${value}
+    </select>
+	
+	
+</mapper>
+
+
+
+
+
+
+

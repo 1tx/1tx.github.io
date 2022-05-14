@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+.header{ position:relative;z-index:10;
+    width:100%; min-width:1200px;height:106px; margin:0px; background:url(../images/headerbg_02.jpg) repeat-x;
+    -moz-box-shadow: 3px 3px 4px #333; -webkit-box-shadow: 3px 3px 4px #333; box-shadow: 3px 3px 4px #333; /* For IE 8 */ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333')"; /* For IE 5.5 - 7 */ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333'); 
+        }
+.headertop{width:1100px;height:100px;padding-top:6px;margin:0px auto;}
+.logo{width:477px;height:76px;padding-top:10px;}
+.headerr{width:620px;height:100px;}
+.headerr a{color:#404040;}
+.headerr p{width:130px;height:15px;padding-top:5px;float:right}
+.headerr p span{display:block;border-right:1px #aaa solid; width:62px;height:15px;float:left; text-align:center}
+#nav{width:1000px;height:auto;padding-top:45px;}
+#nav ul{width:auto;}
+#nav ul li{float:left;width:98px;height:35px;line-height:35px; text-align:center;background:url(../images/navbg_06.jpg) no-repeat right center;}
+#nav ul li a{font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif;font-size:16px; }
+#nav ul li a:hover{background:#ccc;}
+#nav ul li ul{display:none;}
+#nav ul li ul li{background:#000;filter: alpha(opacity=80);opacity: 0.80;border-top:1px #fff solid;}
+#nav ul li ul li a{color:#fff;}
+.bannerbg{position:relative;height:454px;}
+.banner{width:100%;height:300px; position:absolute;top:0px; z-index:4;overflow:hidden}
+.bannerpic{width:950px;height:130px; position:absolute;top:320px;z-index:5;left:50%;margin-left:-475px;_margin-left:-440px;}
+.bannerpic dl{width:200px;height:115px; background:#FFF;-moz-box-shadow: 3px 3px 4px #333; -webkit-box-shadow: 3px 3px 4px #333; box-shadow: 3px 3px 4px #333; /* For IE 8 */ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333')"; /* For IE 5.5 - 7 */ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333');margin:15px 18px;_margin:10px 9px;float:left}
+.bannerpic dl dt{width:188px;height:75px;padding:5px;}
+.bannerpic dl dt img{width:188px;height:75px;}
+.bannerpic dl dd {width:200px;height:30px;line-height:30px; text-align:center;}
+.bannerpic dl dd a{color:#404040;font-size:16px;font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif;}
+.bannerpic dl dd a:hover{color:#f00; text-decoration:underline;}
+.fullSlide {
+	width:100%;
+	position:absolute;
+	height:454px;
+	background:#fff;
+}
+.fullSlide .bd {
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+	overflow:hidden;
+}
+.fullSlide .bd ul {
+	width:100% !important;
+}
+.fullSlide .bd li {
+	width:100% !important;
+	height:454px;
+	overflow:hidden;
+	text-align:center;
+	 background:center
+}
+.fullSlide .bd li a {
+	display:block;
+	width:100%;
+	height:454px;
+}
+
+.fullSlide .prev,.fullSlide .next {
+	display:block;
+	position:absolute;
+	z-index:1;
+	top:50%;
+	margin-top:-30px;
+	left:15%;
+	z-index:1;
+	width:40px;
+	height:60px;
+	background:url(../images/slider-arrow.png) -126px -137px #000 no-repeat;
+	cursor:pointer;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	display:none;
+}
+.fullSlide .next {
+	left:auto;
+	right:15%;
+	background-position:-6px -137px;
+}
+.gonggao{width:1068px;height:36px; margin:0px auto;background:url(../images/gonggaobg_07.jpg) repeat-x;margin-top:15px;}
+.wzgg {width:1000px;margin:0px auto;}
+.wzgg h2{width:80px;height:20px;line-height:20px; border-right: 1px #063 solid;float:left;font-size:16px;font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif;color:#096;margin:8px;}
+.wzgg ul{width:800px;height:36px;line-height:36px;}
+.wzgg a{color:#404040;}
+.wzgg a:hover{color:#f00; text-decoration:underline}
+#newsbox{width:800px;height:36px;overflow:hidden;float:left}
+#box {width:800px;height:36px;overflow:hidden;}
+#box .btnList{ /*btnListClass，索引列表的class名*/ position:absolute; right:10px;bottom:5px;clear:both;text-align:center}
+#box .btnList li{ /*btnListClass下面的LI*/ background: #096;width:25px;height:25px;line-height:25px;overflow:hidden;color: #fff;margin: 1px;cursor: pointer;opacity:.7;float:left;filter:alpha(opacity=70);}
+#box .btnList li.current{/*btnClass，当前索引的class名*/background: #999;color:#000;}
+.main{width:1080px;height:194px;padding-top:15px;margin:0px auto;}
+.mainbg{width:340px;height:194px; background:url(../images/mainbgbg_11.jpg) repeat-x;margin-left:15px;}
+.main_cp{width:314px;height:182px;padding-left:12px;padding-top:12px;}
+.main_cp_bt{width:314px;height:23px;}
+.main_cp_bt h2{width:100px;line-height:23px;font-size:16px;font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif; background:url(../images/mainh2_14.jpg) no-repeat left center; text-indent:15px;float:left}
+.main_cp_bt a{float:right;padding-right:8px;color:#404040;}
+.main_cp_bt a:hover{color:#f00; text-decoration:underline;}
+#probox{ width:255px;height:142px;overflow:hidden;}
+#probox img{width:245px;heigt:145px;}
+#prolist{width:2000px;}
+#prolist li{float:left;margin:5px;}
+.main_jj{width:314px;height:182px;padding-left:12px;padding-top:12px;}
+.main_jj h2{width:314px;height:23px;font-size:16px;font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif; background:url(../images/mainh2_14.jpg) no-repeat left center; text-indent:15px;}
+.main_jj dl{width:313px;height:155px;padding-top:8px;}
+.main_jj dl dt{width:145px;height:135px;float:left}
+.main_jj dl dd{float:right;width:160px;height:130px;padding-top:3px; text-indent:15px;line-height:22px;}
+.main_jj dl dd a{color:#404040;}
+.main_jj dl dd a:hover{color:#f00;}
+.footerbg{width:100%;height:119px; background:url(../images/footerbg_23.jpg) repeat-x; min-width:1200px;margin-top:15px;}
+.footer{width:1080px;height:119px;margin:0px auto;}
+.footl{width: 950px;height:100px;padding-top:15px;}
+.footr{width:112px;height:112px;padding-top:10px;}
+.footr img{width:112px;height:112px;}
+.footl ul{width:950px;height:25px;line-height:25px;padding-top:5px;}
+.footl ul h2{font-size:16px;font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif;float:left;}
+.footl ul a{padding-left:8px; color:#404040;}
+.footl ul a:hover{color:#f00; text-decoration:underline;}
+.footl p{width:950px;line-height:25px; text-align:left;padding-top:5px;}
